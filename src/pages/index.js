@@ -1,5 +1,5 @@
-export { default as Home } from './home/Home.jsx';
-export { default as List } from './list/List.jsx';
-export { default as Login } from './login/Login.jsx';
-export { default as New } from './new/New.jsx';
-export { default as Single } from './single/Single.jsx';
+export { default as Home } from './home/Home';
+export { default as List } from './list/List';
+export { default as Login } from './login/Login';
+export { default as New } from './new/New';
+export { default as Single } from './single/Single';
