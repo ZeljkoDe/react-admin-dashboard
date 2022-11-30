@@ -15,7 +15,7 @@ export default function Home() {
 				</div>
 				<div className='charts'>
 					<Featured />
-					<Chart />
+					<Chart aspect={2 / 1} title='Last 6 Months (Revenue)' />
 				</div>
 				<div className='lists'>
 					<div className='list-title'>Latest Transactions</div>
