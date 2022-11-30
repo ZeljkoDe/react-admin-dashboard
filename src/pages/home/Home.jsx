@@ -1,4 +1,4 @@
-import { Chart, Featured, Navbar, Sidebar, Widget } from 'components';
+import { Chart, Featured, Navbar, Sidebar, Table, Widget } from 'components';
 import './home.scss';
 
 export default function Home() {
@@ -16,6 +16,10 @@ export default function Home() {
 				<div className='charts'>
 					<Featured />
 					<Chart />
+				</div>
+				<div className='lists'>
+					<div className='list-title'>Latest Transactions</div>
+					<Table />
 				</div>
 			</div>
 		</div>
