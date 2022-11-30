@@ -17,3 +17,7 @@ export { default as FullscreenExitOutlinedIcon } from '@mui/icons-material/Fulls
 export { default as NotificationsNoneOutlinedIcon } from '@mui/icons-material/NotificationsNoneOutlined';
 export { default as ChatBubbleOutlineOutlinedIcon } from '@mui/icons-material/ChatBubbleOutlineOutlined';
 export { default as ListOutlinedIcon } from '@mui/icons-material/ListOutlined';
+export { default as KeyboardArrowUpIcon } from '@mui/icons-material/KeyboardArrowUp';
+export { default as AccountBalanceWalletOutlinedIcon } from '@mui/icons-material/AccountBalanceWalletOutlined';
+export { default as ShoppingCartOutlinedIcon } from '@mui/icons-material/ShoppingCartOutlined';
+export { default as MonetizationOnOutlinedIcon } from '@mui/icons-material/MonetizationOnOutlined';
