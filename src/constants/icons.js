@@ -24,3 +24,4 @@ export { default as MonetizationOnOutlinedIcon } from '@mui/icons-material/Monet
 export { default as MoreVertIcon } from '@mui/icons-material/MoreVert';
 export { default as KeyboardArrowDownIcon } from '@mui/icons-material/KeyboardArrowDown';
 export { default as KeyboardArrowUpOutlinedIcon } from '@mui/icons-material/KeyboardArrowUpOutlined';
+export { default as DriveFolderUploadIcon } from '@mui/icons-material/DriveFolderUpload';
