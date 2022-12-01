@@ -1,10 +1,16 @@
-import { productInputs, userInputs } from 'constants/formSource';
+import { useContext } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { productInputs, userInputs } from 'constants/formSource';
+import { DarkModeContext } from 'context/darkModeContext';
 import { Home, List, Login, New, Single } from './pages';
+import './style/dark.scss';
 
 export default function App() {
+	const { darkMode } = useContext(DarkModeContext);
+	console.log(darkMode);
+	const className = `app ${darkMode ? 'dark' : ''}`;
 	return (
-		<>
+		<div className={className}>
 			<BrowserRouter>
 				<Routes>
 					<Route path='/' element={<Home />} />
@@ -34,6 +40,6 @@ export default function App() {
 					</Route>
 				</Routes>
 			</BrowserRouter>
-		</>
+		</div>
 	);
 }

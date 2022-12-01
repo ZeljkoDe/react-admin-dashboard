@@ -1,3 +1,5 @@
+import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import {
 	DashboardIcon,
 	PersonOutlineIcon,
@@ -12,13 +14,17 @@ import {
 	PsychologyOutlinedIcon,
 	AccountCircleOutlinedIcon,
 } from 'constants/icons';
+import { DarkModeContext } from 'context/darkModeContext';
 import './sidebar.scss';
 
 export default function Sidebar() {
+	const { dispatch } = useContext(DarkModeContext);
 	return (
 		<div className='sidebar'>
 			<div className='top'>
-				<div className='logo'>adminPanel</div>
+				<Link to='/' style={{ textDecoration: 'none' }}>
+					<div className='logo'>adminPanel</div>
+				</Link>
 			</div>
 			<div className='center'>
 				<ul>
@@ -29,12 +35,16 @@ export default function Sidebar() {
 					</li>
 					<p className='title'>LISTS</p>
 					<li>
-						<PersonOutlineIcon className='icon' />
-						<span>Users</span>
+						<Link to='/users' style={{ textDecoration: 'none' }}>
+							<PersonOutlineIcon className='icon' />
+							<span>Users</span>
+						</Link>
 					</li>
 					<li>
-						<StoreIcon className='icon' />
-						<span>Products</span>
+						<Link to='/products' style={{ textDecoration: 'none' }}>
+							<StoreIcon className='icon' />
+							<span>Products</span>
+						</Link>
 					</li>
 					<li>
 						<CreditCardIcon className='icon' />
@@ -78,8 +88,14 @@ export default function Sidebar() {
 				</ul>
 			</div>
 			<div className='bottom'>
-				<div className="color-option"></div>
-				<div className="color-option"></div>
+				<div
+					className='color-option'
+					onClick={() => dispatch({ type: 'LIGHT' })}
+				></div>
+				<div
+					className='color-option'
+					onClick={() => dispatch({ type: 'DARK' })}
+				></div>
 			</div>
 		</div>
 	);

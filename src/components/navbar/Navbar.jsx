@@ -1,3 +1,5 @@
+import { useContext } from 'react';
+import { DarkModeContext } from 'context/darkModeContext';
 import {
 	LanguageOutlinedIcon,
 	SearchOutlinedIcon,
@@ -10,6 +12,8 @@ import {
 import './navbar.scss';
 
 export default function Navbar() {
+	const { dispatch } = useContext(DarkModeContext);
+
 	return (
 		<div className='navbar'>
 			<div className='wrapper'>
@@ -22,7 +26,10 @@ export default function Navbar() {
 						<LanguageOutlinedIcon className='icon' />
 						English
 					</div>
-					<div className='item'>
+					<div
+						className='item'
+						onClick={() => dispatch({ type: 'TOGGLE' })}
+					>
 						<DarkModeOutlinedIcon className='icon' />
 					</div>
 					<div className='item'>
